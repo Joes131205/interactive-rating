@@ -63,27 +63,22 @@
 <body>
     <div id="container">
         <img src="./images/illustration-thank-you.svg">
-        
         <p id="selected-rating">You selected - out of 5</p>
-
         <h1 id="thankyou">Thank you!</h1>
-    
         <p id="message">We appreciate you taking the time to give a rating. <br>If you ever need more support, 
         don’t hesitate to get in touch!</p>
     </div>
+    
     <div class="attribution">
         <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by Joes131205.</p>
-      </div>
+    </div>
     
-
-
     <script>
         const selectedRatingEl = document.getElementById("selected-rating")
         const messageEl = document.getElementById("message")
 
         window.addEventListener("load", function() {
             const rating = localStorage.getItem("rating")
-            console.log(rating)
             selectedRatingEl.textContent = `You rated ${rating} out of 5!`
         })
     </script>
