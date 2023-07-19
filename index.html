@@ -76,15 +76,11 @@
   </style>
 </head>
 <body>
-
-
   <div id="container">
     <img src="./images/icon-star.svg" width="30px">
     <h1>How did we do?</h1>
-    
     <p>Please let us know how we did with your support request. <br>All feedback is appreciated 
     to help us improve our offering!</p>
-
     <div class="rating">
       <div class="rating-option 1" data-value="1">1</div>
       <div class="rating-option 2" data-value="2">2</div>
@@ -93,30 +89,23 @@
       <div class="rating-option 5" data-value="5">5</div>
     </div>
     <button onclick="switchTab()">Submit</button>
-     
   </div>
   <script>
     const ratings = document.querySelectorAll(".rating-option");
-    let current
+    let current = 0
     function showRating() {
       current = this.getAttribute('data-value')
       ratings.forEach(element => element.classList.remove("selected"))
       this.classList.add("selected")
 
     }
-
-    function switchTab() {
-      if(current) {
-        localStorage.setItem("rating", current)
-      } else {
-        localStorage.setItem("rating", 0)
-      }
-      
-      location.replace('./thankyou.html')
-    }
     
     ratings.forEach(element => element.addEventListener("click", showRating));
-
+    
+    function switchTab() {
+      localStorage.setItem("rating", current)
+      location.replace('./thankyou.html')
+    }
   </script>
 </body>
 </html>
