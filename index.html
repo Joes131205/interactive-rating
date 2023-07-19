@@ -9,13 +9,7 @@
   <title>Frontend Mentor | Interactive rating component</title>
 
   <style>
-    .rating {
-      display: flex;
-      justify-content: space-around;
-      margin: 30px ;
-    }
-    html,
-    body {
+    html, body {
       height: 100%;
       margin: 0;      
       display: flex;
@@ -39,32 +33,10 @@
     #container > p {
       font-weight: 400;
       color: hsl(217, 12%, 63%);
+      margin-top: 0px;
+      font-size: 15px;
     }
-
-
-    .rating:hover {
-      cursor: pointer;
-
-    }
-
-    .rating-option.selected {
-      background-color: hsl(25, 97%, 53%);
-      color: wheat;
-    }
-    .rating-option {
-      padding: 15px 20px;
-      font-size: 20px;
-      border-radius: 60px;
-      color: hsl(217, 12%, 63%);
-      
-    }
-
-    .rating-option:hover {
-      color: white;
-      background-color: hsl(0, 0%, 64%);
-    }
-
-
+    
     #container > button {
       width: 90%;
       height: 30px;
@@ -77,12 +49,33 @@
       font-family: 'Overpass', sans-serif;
       font-weight: bolder;
     }
-
-    #container > p {
-      margin-top: 0px;
-      font-size: 15px;
-
+    .rating {
+      display: flex;
+      justify-content: space-around;
+      margin: 30px ;
     }
+    
+    .rating-option {
+      padding: 15px 20px;
+      font-size: 20px;
+      border-radius: 60px;
+      color: hsl(217, 12%, 63%);
+      
+    }
+
+    .rating-option.selected {
+      background-color: hsl(25, 97%, 53%);
+      color: white;
+    }
+
+    .rating-option:hover {
+      cursor: pointer;
+      color: white;
+      background-color: hsl(0, 0%, 64%);
+    }
+
+
+
   </style>
 </head>
 <body>
